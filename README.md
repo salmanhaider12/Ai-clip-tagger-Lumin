@@ -1,6 +1,6 @@
 # AI Clip Tagger for Lumin 🎮
 
-This is a prototype built as part of the Lumin Internship AI Take-Home Task. It demonstrates an AI-powered system that automatically tags frames from gaming clips using OpenAI’s CLIP model.
+This is a prototype built as part of the Lumin. It demonstrates an AI-powered system that automatically tags frames from gaming clips using OpenAI’s CLIP model.
 
 ##  Features
 

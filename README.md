@@ -25,7 +25,7 @@ This is a prototype built for **Lumin** that demonstrates how an AI-powered syst
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. Upload multiple frames from a gameplay clip (e.g. extracted from a video or screen-recorded from Lumin).
 2. The model automatically selects the **most dynamic or high-change frame** using simple frame difference analysis.
@@ -51,7 +51,5 @@ From the sampled frames, we apply:
 
 This method ensures we extract the **most contextually relevant and meaningful moment** in the clip — not just a random still.
 
----
 
-This aligns with Hoda's feedback by ensuring scalability in processing real-world gaming videos efficiently, while keeping the tagging results accurate and impactful.
 

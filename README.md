@@ -1,25 +1,45 @@
-# AI Clip Tagger for Lumin 🎮
+🎮 SmartClip AI Tagger – Lumin Prototype
+This is a prototype for Lumin demonstrating how AI can automatically tag key frames from gameplay clips using OpenAI’s CLIP model.
 
-This is a prototype built as part of the Lumin. It demonstrates an AI-powered system that automatically tags frames from gaming clips using OpenAI’s CLIP model.
+Features
+Upload real gameplay clip frames (screenshots from Lumin)
 
-##  Features
+Automatically selects most important frame using scene-difference detection
 
-- Upload a gaming image frame
-- Zero-shot tagging with CLIP model
-- Custom tags: `clutch`, `headshot`, `fail`, `comedy`, `highlight`
-- Output: most relevant tag + confidence scores
+Zero-shot tagging with CLIP model
 
-## Technologies
+Custom tags: clutch, headshot, fail, comedy, highlight
 
-- Python (Google Colab)
-- OpenAI CLIP (`ViT-B/32`)
-- PyTorch
-- PIL
-- matplotlib
+Output: most relevant tags + confidence scores
 
-## How It Works
+Technologies
+Python (Google Colab / Streamlit)
 
-1. Upload a game frame (screenshot)
-2. CLIP model embeds the image + text labels
-3. Similarity is computed to pick the best matching tag
-4. Output shows top tag with probability scores
+OpenAI CLIP (ViT-B/32)
+
+PyTorch
+
+PIL
+
+OpenCV
+
+Matplotlib
+
+ How It Works
+Upload multiple frames from a gameplay clip (e.g. extracted from a video).
+
+The model automatically selects the most dynamic or high-change frame using frame difference detection.
+
+CLIP generates visual embeddings and compares them to your tag labels.
+
+Outputs the most relevant tag + score.
+
+🧩 How We Select the Right Frame:
+In large video clips (millions of frames), it’s inefficient to tag every frame.
+Instead, we apply a two-stage filtering process:
+
+Down-sampling: Extract 1 frame per second or based on scene boundary detection.
+
+Key Frame Selection: From the sample, we use frame-to-frame difference or motion peaks to choose the most meaningful frame (high action or scene shift).
+
+This approach ensures we always tag the most contextually relevant moment, not just a random still.
